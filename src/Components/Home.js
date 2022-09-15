@@ -51,8 +51,8 @@ export default function () {
   const [data, setdata] = useState(arr);
   
   const hangle = ()=>{
-    const dat = data;
-    const id = dat.length+1;
+    const dat = [...data];
+    const id = `${dat.length+1}`;
     const obj = {
        id,name,email,address,mobile,city,dob
     }
@@ -62,6 +62,12 @@ export default function () {
     setdata(dat);
     console.log(data);
     ref.current.click();
+    setaddress(null)
+    setname(null)
+    setemail(null)
+    setmobile(null)
+    setcity(null)
+    setdob(null)
   }
 
   const handleupdel = (i) => {

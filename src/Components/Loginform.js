@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Loginform() {
   const variable = {
@@ -35,7 +35,7 @@ function Loginform() {
         </div>
         <div className="p-2">
 
-      <Link className="btn btn-primary">Login </Link>
+      <NavLink className="btn btn-primary" to='/home'>Login</NavLink>
         </div>
         {/* <div className="p-2">
 

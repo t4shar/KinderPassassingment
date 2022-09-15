@@ -15,8 +15,7 @@ export default function Card({ name,email,dob,city,mobile,address,id,handleupdel
         <p class="card-text">{address}</p>
         <p class="card-text">{city}</p>
         <p class="card-text">{mobile}</p>
-        <a href="#" class="btn btn-primary" >Edit</a>
-        <button class="btn btn-primary mx-3" onClick={()=>{ handleupdel(id) }} >Delete</button>
+        <button class="btn btn-primary" onClick={()=>{ handleupdel(id) }} >Delete</button>
       </div>
     </div>
         </div>
