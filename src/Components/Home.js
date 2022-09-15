@@ -45,9 +45,9 @@ export default function () {
   const handleupdel =(i) =>{
     console.log(i);
     console.log(data);
-    const set = data.map( (c)=>{
-        return c.id != i ? c : {}
-      } )
+    const set = data.filter((c) => {
+      return c.id != i;
+    });
       console.log(set);
     setdata(set);
   }
@@ -61,7 +61,7 @@ export default function () {
       </nav>
       <div className='row'>
     {
-      arr.map( (c,i)=>{
+      data.map( (c,i)=>{
         return <Card name={c.name} email={c.email} dob = {c.dob} city = {c.city} mobile = {c.mobile} address={c.address} id={c.id} handleupdel={handleupdel} />
       })
     }
